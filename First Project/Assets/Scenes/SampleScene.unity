@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 755419241}
   - component: {fileID: 755419240}
   - component: {fileID: 755419242}
+  - component: {fileID: 755419243}
   m_Layer: 0
   m_Name: _gameManager
   m_TagString: Untagged
@@ -270,13 +271,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755419239}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b36260ccb940ab5408913503e61202e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hairColor: 
   age: 0
+--- !u!114 &755419243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755419239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e7cf78b58fa4444493409019832a3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dollars: 0
+  cents: 0
+  fullMoon: 0
+  username: OracleMS
+  password: Nefter32112
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

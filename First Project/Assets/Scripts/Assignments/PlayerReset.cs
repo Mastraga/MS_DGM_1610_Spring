@@ -10,7 +10,9 @@ public class PlayerReset : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+
+
+    {   //Detects when keybind for "Cancel" is pressed
         resetPress = Input.GetAxis("Cancel");
 
         if(resetPress == 1)

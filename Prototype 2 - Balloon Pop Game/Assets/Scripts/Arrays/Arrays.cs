@@ -13,7 +13,19 @@ public class Arrays : MonoBehaviour
     
     public string[] blades = {"Pyra", "Dromarch", "Poppi", "Brighid", "Pandoria"};
 
+    public string[] elements = {"Fire", "Water", "Wind", "Ice", "Electric", "Earth", "Light", "Dark"};
+
+    public string[] prisonerList = {"Ulfric Stormcloak, Jarl of Windhelm", "Ralof of Riverwood", "Lokir of Rorikstead"};
+
     public int[] numbers = {23, 75, 84, 2, 16, 81, 10};
+
+    public int[] goldValues = {20, 25, 30, 35, 40, 50, 70, 100};
+
+    public int[] luckyNumbers = {7, 13, 18, 21, 42, 69};
+
+    public float[] damageMultiplier = {1.00f, 0.75f, 0.90f, 1.25f, 1.5f, 1.75f, 2.00f};
+
+    
 
     
 
@@ -31,9 +43,11 @@ public class Arrays : MonoBehaviour
         */
 
         //for each item in the array, this loop will run as many times as there are item in the array
-        foreach(int numbers in numbers)
+        /*foreach(int numbers in numbers)
         {
             print(numbers + " Cabbages");
         }
+        */
+        Debug.Log("The Element of " + elements[0] + " is very effective against Krabbles and will multiply your damage by " + damageMultiplier[4]);
     }
 }

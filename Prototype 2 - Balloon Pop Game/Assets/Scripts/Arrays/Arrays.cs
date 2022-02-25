@@ -47,7 +47,10 @@ public class Arrays : MonoBehaviour
         {
             print(numbers + " Cabbages");
         }
-        */
+        
+
+
         Debug.Log("The Element of " + elements[0] + " is very effective against Krabbles and will multiply your damage by " + damageMultiplier[4]);
+        */
     }
 }

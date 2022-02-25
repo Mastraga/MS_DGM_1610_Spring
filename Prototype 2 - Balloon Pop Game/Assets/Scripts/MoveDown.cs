@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MoveDown : MonoBehaviour
+{
+    public float moveSpeed = 1.0f;
+    public float lowerBound = -5.0f;
+    public ScoreManager scoreManager;
+    private Balloon balloon;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //Reference ScoreManager
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>(); 
+        balloon = GetComponent<Balloon>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.Translate(Vector3.down * Time.deltaTime * moveSpeed);
+
+        //destroy balloon after passes lower bound
+        if(transform.position.y < lowerBound)
+        {
+            scoreManager.DecreaseScoreText(balloon.scoreToGive);
+            Destroy(gameObject);
+        }
+    }
+}

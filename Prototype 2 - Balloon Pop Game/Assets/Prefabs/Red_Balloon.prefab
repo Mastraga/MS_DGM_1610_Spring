@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6698671591085827294}
   - component: {fileID: 616094403665360092}
   - component: {fileID: 7007539147220996695}
+  - component: {fileID: 539778672}
+  - component: {fileID: 539778673}
   m_Layer: 0
   m_Name: Red_Balloon
   m_TagString: Untagged
@@ -95,3 +97,32 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &539778672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8359932730259115431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77bbfc94f4195b5489b6572462467ca4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+--- !u!114 &539778673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8359932730259115431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51d70b9dd71d37249aead6ad2a4ef054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreToGive: 100
+  clickToPop: 3
+  scaleToIncrease: 0.1
+  scoreManager: {fileID: 0}

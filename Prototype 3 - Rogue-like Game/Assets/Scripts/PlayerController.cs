@@ -14,20 +14,23 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Reference the 2D Rigidbody component
         rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxis("Horizontal"); // Input for Left Right Movement
-        movement.y = Input.GetAxis("Vertical"); // Input for Up Down Movement
+        // Input for Left Right Movement
+        movement.x = Input.GetAxis("Horizontal"); 
+        // Input for Up Down Movement
+        movement.y = Input.GetAxis("Vertical"); 
     }
 
     //Set number of calls per frame, better for physics
     void FixedUpdate()
     {
         //Apply physics and move the character
-        rb.MovePosition(rb.position + (movement * movespeed * Time.deltaTime));
+        rb.MovePosition(rb.position + (movement * movespeed * Time.deltaTime));  
     }
 }

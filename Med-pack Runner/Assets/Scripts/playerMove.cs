@@ -5,11 +5,13 @@ using UnityEngine;
 public class playerMove : MonoBehaviour
 {
     public float movespeed = 5.0f;
-    //private float turnSpeed = 50f;
-    private Vector3 movement;
+    private float turnSpeed = 180f;
+    private float rInput;
+
+    private float fInput;
+    private float hInput;
+
     private Rigidbody rb;
-    
-    public float rInput;
 
     // Start is called before the first frame update
     void Start()
@@ -20,16 +22,27 @@ public class playerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxis("Horizontal");
-        movement.z = Input.GetAxis("Vertical");
-        //rInput = Input.GetAxis("Mouse X");
+        hInput = Input.GetAxis("Horizontal");
+        fInput = Input.GetAxis("Vertical");
+        rInput = Input.GetAxis("Mouse X");
 
-        //transform.Rotate(Vector3.up * rInput * Time.deltaTime * turnSpeed);
+        if(Input.GetButton("Sprint"))
+        {
+            movespeed = 8.0f;
+        }
+        else
+        {
+            movespeed = 5.0f;
+        }
+
+        transform.Translate(Vector3.right * hInput * Time.deltaTime * movespeed);
+        transform.Translate(Vector3.forward * fInput * Time.deltaTime * movespeed);
+        transform.Rotate(Vector3.up * rInput * Time.deltaTime * turnSpeed);
     }
 
-    //FixedUpdate() is a monobehaviour built in to unity
+    /*FixedUpdate() is a monobehaviour built in to unity
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + (movement * movespeed * Time.deltaTime));
-    }
+    }*/
 }

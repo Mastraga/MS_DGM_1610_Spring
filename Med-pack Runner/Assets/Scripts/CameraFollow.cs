@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     GameObject player;
-    private Vector3 offset = new Vector3(0,8,-5);
+    private Vector3 offset = new Vector3(0,2,-5);
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         transform.position = player.transform.position + offset;
-        //transform.Rotation = player.transform.rotation;
+        transform.RotateAround(player.transform.position, Vector3.up, 0);
     }
 
     void FixedUpdate()

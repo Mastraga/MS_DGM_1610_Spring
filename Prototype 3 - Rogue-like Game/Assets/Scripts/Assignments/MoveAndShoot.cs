@@ -7,9 +7,12 @@ public class MoveAndShoot : MonoBehaviour
     public float speed;
     public float stopDistance;  //Enemy will move towards player at this distance
     public float retreatDistance;  //Enemy will move away from player at this distance
+
     private Transform target;
+
     private float shotDelay;
     public float startDelay;
+
     public GameObject projectile;
 
     // Start is called before the first frame update
@@ -38,6 +41,7 @@ public class MoveAndShoot : MonoBehaviour
         if(shotDelay <= 0)
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
+            shotDelay = startDelay;
         }
         else
         {

@@ -4,12 +4,28 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header ("Player Health")]
 
+    public int curHP;
+    public int maxHP;
+    
+
+    [Header ("Player Movement")]
     public float movespeed = 5.0f;  // Speed at which the player moves
     private Rigidbody2D rb;  // Store the referenced 2D Rigidbody
 
     //Vector2(X,Y)
-    Vector2 movement; // Store the Players x,y position for movment
+    Vector2 movement;
+
+    [Header ("Player Combat")]
+    public float attackRange; // Range at which the player can attack
+    public float attackRate;
+    private float lastAttackTime; // Cooldown in between attacks
+    public int damage;  
+    public LayerMask enemyLayer;
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,5 +48,22 @@ public class PlayerController : MonoBehaviour
     {
         //Apply physics and move the character
         rb.MovePosition(rb.position + (movement * movespeed * Time.deltaTime));  
+    }
+
+    void Attack()
+    {
+        lastAttackTime = Time.time;
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, facingDirection, attackRange, enemyLayer);
+
+        if(hit.collider != null)
+        {
+            hit.collider.GetComponent<Enemy>()?.TakeDamage(damage);
+        }
+    }
+
+    void Die()
+    {
+        Debug.Log("Player has retired to the green plains of Elysium");
     }
 }

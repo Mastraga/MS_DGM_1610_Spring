@@ -380,7 +380,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384de06c02284db48887c2773c2ece93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curHP: 0
+  maxHP: 0
+  damage: 0
   movespeed: 5
+  attackRange: 0
+  attackRate: 0
 --- !u!1 &1764189365
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +397,7 @@ GameObject:
   - component: {fileID: 1764189368}
   - component: {fileID: 1764189367}
   - component: {fileID: 1764189366}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy_Guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -528,7 +533,7 @@ GameObject:
   - component: {fileID: 1953879177}
   - component: {fileID: 1953879176}
   - component: {fileID: 1953879178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy_MoveShoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,7 +738,7 @@ GameObject:
   - component: {fileID: 2093206889}
   - component: {fileID: 2093206892}
   - component: {fileID: 2093206893}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy_Follow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

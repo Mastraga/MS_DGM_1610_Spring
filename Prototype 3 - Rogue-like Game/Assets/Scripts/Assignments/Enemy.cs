@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.time - lastAttackTime >= attackRate)
+        if(Time.time - lastAttackTime >= attackRate && Vector2.Distance(transform.position, player.transform.position) < attackRange)
         {
             Attack();
         }
@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
     void Attack()
     {
         lastAttackTime = Time.time;
-        PlayerController.TakeDamage(damage);
+        player.TakeDamage(damage);
     }
 
     void Die()

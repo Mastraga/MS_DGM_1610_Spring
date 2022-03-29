@@ -9,14 +9,14 @@ public class MedPackSpawner : MonoBehaviour
     public float minZ;
     public float maxZ;
 
-    public GameObject medPack;
+    private bool isCreated;
+
+    public MedPack medPack;
 
     // Start is called before the first frame update
     void Start()
     {
-        medPack = GameObject.Find("MedPack");
-        spawnPack();
-
+    
     }
 
     // Update is called once per frame
@@ -25,8 +25,13 @@ public class MedPackSpawner : MonoBehaviour
         
     }
 
-     void spawnPack()
+    public void spawnPack()
     {
-        Instantiate(medPack, new Vector3(Random.Range(minX,maxX), 0.5f, Random.Range(minZ,maxZ)), Quaternion.identity);
+
+        if(!isCreated) 
+        {
+            Instantiate(medPack, new Vector3(Random.Range(minX,maxX), 0.5f, Random.Range(minZ,maxZ)), Quaternion.identity);
+            isCreated = true;
+        }
     }
 }

@@ -375,7 +375,7 @@ MonoBehaviour:
   maxX: 20
   minZ: -20
   maxZ: 20
-  medPack: {fileID: 9163188483932508204, guid: 646551f147501034aaff19e6e3d3598e, type: 3}
+  medPack: {fileID: -9144651064553315311, guid: 646551f147501034aaff19e6e3d3598e, type: 3}
 --- !u!4 &950657419
 Transform:
   m_ObjectHideFlags: 0

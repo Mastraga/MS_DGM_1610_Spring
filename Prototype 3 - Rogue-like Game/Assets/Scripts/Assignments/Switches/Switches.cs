@@ -8,6 +8,9 @@ public class Switches : MonoBehaviour
 
     public int socialClass = 1;
 
+    public float health = 100;
+
+
     void Start()
     {
         switch(npcConv)
@@ -22,11 +25,11 @@ public class Switches : MonoBehaviour
              print("You run away in shame, you coward!");
              break;
         }
-        /*
+        
         switch(socialClass)
         {
             case 5:
-             Debug.Log("Hello, you're Magesty");
+             Debug.Log("Hello, your Magesty");
              break;
             case 4:
              Debug.Log("Hello Young Prince");
@@ -47,7 +50,20 @@ public class Switches : MonoBehaviour
              Debug.Log("I do not talk with strangers");
              break;
         }
-        */
+
+        switch(health)
+        {
+            case 100:
+             Debug.Log("Health is 100");
+             break;
+            case 50:
+             Debug.Log("Health is 50");
+             break;
+            case 0:
+             Debug.Log("Health is 0.  Player has died");
+             break;
+        }
+        
     }
 
 

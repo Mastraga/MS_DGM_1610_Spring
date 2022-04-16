@@ -594,12 +594,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1464898401}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f6db909fd57ff44eb3f3af4fbe34060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numEwoks: 0
+  levelCap: 15
+  maxCupcakes: 10
+  timeOut: 0
+  villageEmpty: 0
   ducksInPond: 99
+  goldCoins: 0
+  skeletons: 10
+  noponDubloons: 0
+  goldfish: 50
 --- !u!4 &1464898403
 Transform:
   m_ObjectHideFlags: 0
